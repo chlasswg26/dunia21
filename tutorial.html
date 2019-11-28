@@ -1,0 +1,272 @@
+<h1 id="-scraper-dunia21-lk21-https-github-com-ardzz-dunia21-"><a href="https://github.com/ardzz/dunia21">Scraper Dunia21 / LK21</a></h1>
+<p><a href=""><img src="https://img.shields.io/badge/Version-1.0-brightgreen.svg?maxAge=259200" alt="Version"></a>
+<a href=""><img src="https://img.shields.io/badge/Release-Beta-green.svg" alt="Stage"></a>
+<a href=""><img src="https://img.shields.io/badge/Codename_-_Ardzz-blue.svg?maxAge=259200" alt="Build"></a>
+<a href="http://hits.dwyl.io/ardzz/dunia21"><img src="http://hits.dwyl.io/ardzz/dunia21.svg" alt="HitCount"></a></p>
+<h3 id="scraper-dunia21-lk21">Scraper Dunia21 / LK21</h3>
+<p><em>Scraper</em> ini adalah <em>scraper</em> buatan saya yang pertama dan juga berbasis <strong>API</strong> dengan output <strong>JSON</strong><br>
+Saya menulis kode ini secara <em>native</em> dan tidak menggunakan framework</p>
+<h2 id="persyaratan-">Persyaratan :</h2>
+<ul>
+<li>PHP 7.x</li>
+<li>Library cURL (php-curl)</li>
+<li>OS Linux only, <em>karena saya belum mencobanya di OS <strong>Windows</strong></em></li>
+</ul>
+<h2 id="penggunaan-">Penggunaan :</h2>
+<ul>
+<li>Clone repository ini didalam folder path webserver (misalnya di <em>/var/www/html/</em>)<h4 id="mencari-film">Mencari Film</h4>
+Base URL : <code>https://dunia21.herokuapp.com/cari_film/{query}</code> <br>
+Query silahkan diganti dengan judul film yang dicari, contoh<br><pre><code><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost/dunia21/cari_film/how+to+train+your+dragon</span>
+</code></pre>URL diatas sudan diencode menjadi rawurl<br>
+Contoh output<pre><code class="lang-json">{
+  <span class="hljs-attr">"total_hasil"</span>: <span class="hljs-number">3</span>,
+  <span class="hljs-attr">"hasil_pencarian"</span>: [
+      {
+          <span class="hljs-attr">"judul"</span>: <span class="hljs-string">"The SpongeBob SquarePants Movie (2004)"</span>,
+          <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://s3.layarkaca21.vip/wp-content/uploads/2016/04/film-spongebob-squarepants-movie-2004.jpg"</span>,
+          <span class="hljs-attr">"tautan"</span>: <span class="hljs-string">"https://dunia21.me/spongebob-squarepants-movie-2004/"</span>,
+          <span class="hljs-attr">"genre"</span>: [
+              <span class="hljs-string">"adventure"</span>,
+              <span class="hljs-string">"animation"</span>,
+              <span class="hljs-string">"comedy"</span>
+          ],
+          <span class="hljs-attr">"tahun"</span>: <span class="hljs-string">"2004"</span>,
+          <span class="hljs-attr">"negara"</span>: <span class="hljs-string">"usa"</span>,
+          <span class="hljs-attr">"kualitas"</span>: <span class="hljs-string">"bluray"</span>,
+          <span class="hljs-attr">"ukuran"</span>: <span class="hljs-string">"1080"</span>,
+          <span class="hljs-attr">"sutradara"</span>: <span class="hljs-string">"Stephen Hillenburg, Mark Osborne"</span>,
+          <span class="hljs-attr">"bintang"</span>: <span class="hljs-string">"Tom Kenny, Clancy Brown, Rodger Bumpass, Bill Fagerbakke"</span>
+      },
+      {
+          <span class="hljs-attr">"judul"</span>: <span class="hljs-string">"SpongeBob SquarePants: Sea Side Story (2017)"</span>,
+          <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://s3.layarkaca21.vip/wp-content/uploads/2017/04/images.jpg"</span>,
+          <span class="hljs-attr">"tautan"</span>: <span class="hljs-string">"https://dunia21.me/spongebob-squarepants-sea-side-story-2017/"</span>,
+          <span class="hljs-attr">"genre"</span>: [],
+          <span class="hljs-attr">"tahun"</span>: <span class="hljs-string">"2017"</span>,
+          <span class="hljs-attr">"negara"</span>: <span class="hljs-string">"united-states"</span>,
+          <span class="hljs-attr">"kualitas"</span>: <span class="hljs-string">"dvdrip"</span>,
+          <span class="hljs-attr">"ukuran"</span>: <span class="hljs-string">"360"</span>,
+          <span class="hljs-attr">"sutradara"</span>: <span class="hljs-string">"Stephen Hillenburg"</span>,
+          <span class="hljs-attr">"bintang"</span>: <span class="hljs-string">"Tom Kenny"</span>
+      },
+      {
+          <span class="hljs-attr">"judul"</span>: <span class="hljs-string">"The SpongeBob Movie: Sponge Out of Water (2015)"</span>,
+          <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://s7.layarkaca21.vip/wp-content/uploads/2015/12/film-the-spongebob-movie-sponge-out-of-water-2015.jpg"</span>,
+          <span class="hljs-attr">"tautan"</span>: <span class="hljs-string">"https://dunia21.me/the-spongebob-movie-sponge-out-of-water-2015/"</span>,
+          <span class="hljs-attr">"genre"</span>: [
+              <span class="hljs-string">"adventure"</span>,
+              <span class="hljs-string">"animation"</span>,
+              <span class="hljs-string">"comedy"</span>
+          ],
+          <span class="hljs-attr">"tahun"</span>: <span class="hljs-string">"2015"</span>,
+          <span class="hljs-attr">"negara"</span>: <span class="hljs-string">"usa"</span>,
+          <span class="hljs-attr">"kualitas"</span>: <span class="hljs-string">"bluray"</span>,
+          <span class="hljs-attr">"ukuran"</span>: <span class="hljs-string">"720"</span>,
+          <span class="hljs-attr">"sutradara"</span>: <span class="hljs-string">"Paul Tibbitt, Mike Mitchell"</span>,
+          <span class="hljs-attr">"bintang"</span>: <span class="hljs-string">"Antonio Banderas, Eric Bauza, Tim Conway, Eddie Deezen"</span>
+      }
+  ]
+}
+</code></pre>
+<h3 id="mencari-informasi-film">Mencari Informasi Film</h3>
+Base URL : <code>https://dunia21.herokuapp.com/info_film/{slug}</code> <br>
+Secara default url <code>https://dunia21.me/how-to-train-your-dragon-the-hidden-world-2019/</code><br>
+Jadi <em>slug</em>nya adalah <code>how-to-train-your-dragon-the-hidden-world-2019</code><br><h5 id="rawurl-">Rawurl :</h5>
+<pre><code><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost/dunia21/info_film/how-to-train-your-dragon-the-hidden-world-2019</span>
+</code></pre>Contoh output<pre><code class="lang-json">{
+  <span class="hljs-comment">"judul"</span>: <span class="hljs-comment">"How to Train Your Dragon: The Hidden World (2019)"</span>,
+  <span class="hljs-comment">"durasi"</span>: <span class="hljs-comment">"1 jam 44 menit"</span>,
+  <span class="hljs-comment">"thumbnail"</span>: <span class="hljs-comment">"https://s5.layarkaca21.vip/wp-content/uploads/2019/01/film-how-to-train-your-dragon-the-hidden-world2019-lk21.jpg"</span>,
+  <span class="hljs-comment">"negara"</span>: <span class="hljs-comment">"United States of America"</span>,
+  <span class="hljs-comment">"kualitas"</span>: <span class="hljs-comment">"bluray"</span>,
+  <span class="hljs-comment">"genre"</span>: [
+      <span class="hljs-comment">"Action"</span>,
+      <span class="hljs-comment">"Adventure"</span>,
+      <span class="hljs-comment">"Animation"</span>,
+      <span class="hljs-comment">"Comedy"</span>,
+      <span class="hljs-comment">"Family"</span>,
+      <span class="hljs-comment">"Fantasy"</span>
+  ],
+  <span class="hljs-comment">"artis"</span>: [
+      <span class="hljs-comment">"Cate Blanchett"</span>,
+      <span class="hljs-comment">"Gerard Butler"</span>,
+      <span class="hljs-comment">"Jonah Hill"</span>,
+      <span class="hljs-comment">"Kit Harington"</span>
+  ],
+  <span class="hljs-comment">"tag"</span>: [
+      <span class="hljs-comment">"Based On Novel Or Book"</span>,
+      <span class="hljs-comment">"Cgi"</span>,
+      <span class="hljs-comment">"Cgi Animation"</span>,
+      <span class="hljs-comment">"Dragon"</span>,
+      <span class="hljs-comment">"Featured"</span>,
+      <span class="hljs-comment">"Finale"</span>,
+      <span class="hljs-comment">"flying"</span>,
+      <span class="hljs-comment">"Sequel"</span>,
+      <span class="hljs-comment">"Sequel,finale,dragon,cgi Animation,viking"</span>,
+      <span class="hljs-comment">"Viking"</span>
+  ],
+  <span class="hljs-comment">"slug"</span>: <span class="hljs-comment">"how-to-train-your-dragon-the-hidden-world-2019"</span>,
+  <span class="hljs-comment">"url_download"</span>: {
+      <span class="hljs-comment">"Rapidvideo"</span>: [
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://www.rapidvideo.com/d/G1XEMEO1OT"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"360"</span>
+          },
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://www.rapidvideo.com/d/G1XEMEO1OT"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"480"</span>
+          },
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://www.rapidvideo.com/d/G1XEMEO1OT"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"720"</span>
+          },
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://www.rapidvideo.com/d/G1XEMEO1OT"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"1080"</span>
+          }
+      ],
+      <span class="hljs-comment">"Filecloud"</span>: [],
+      <span class="hljs-comment">"Doupload"</span>: [
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://douploads.com/fqbahfomcq6r"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"1080"</span>
+          }
+      ],
+      <span class="hljs-comment">"Mirrorace"</span>: [
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://mirrorace.com/m/3xGP1"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"1080"</span>
+          }
+      ],
+      <span class="hljs-comment">"Go4up"</span>: [
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"http://dl.go4up.com/dl/e4e6b17cd184c9"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"1080"</span>
+          }
+      ],
+      <span class="hljs-comment">"Embedupload"</span>: [
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"http://www.embedupload.com/?d=9QB2VSL2F4"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"1080"</span>
+          }
+      ],
+      <span class="hljs-comment">"Terrafile"</span>: [],
+      <span class="hljs-comment">"Unknown"</span>: [
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://static-mp4-b.fastcdn21.com/multi/how-to-train-your-dragon-the-hidden-world-2019/how-to-train-your-dragon-the-hidden-world-2019-360p.mp4"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"360"</span>
+          },
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://static-mp4-b.fastcdn21.com/multi/how-to-train-your-dragon-the-hidden-world-2019/how-to-train-your-dragon-the-hidden-world-2019-480p.mp4"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"480"</span>
+          },
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://static-mp4-b.fastcdn21.com/multi/how-to-train-your-dragon-the-hidden-world-2019/how-to-train-your-dragon-the-hidden-world-2019-720p.mp4"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"720"</span>
+          },
+          {
+              <span class="hljs-comment">"url"</span>: <span class="hljs-comment">"https://static-mp4-b.fastcdn21.com/multi/how-to-train-your-dragon-the-hidden-world-2019/how-to-train-your-dragon-the-hidden-world-2019-1080p.mp4"</span>,
+              <span class="hljs-comment">"quality"</span>: <span class="hljs-comment">"1080"</span>
+          }
+      ]
+  }
+}
+}
+</code></pre>
+<h3 id="film-berdasarkan-genre">Film Berdasarkan Genre</h3>
+Genre yang ada<pre><code>drama, comedy, action, thriller, romance, horror, crime, adventure, 
+mystery, animation, fantasy, <span class="hljs-keyword">sci-fi, </span>family, wrestling, <span class="hljs-keyword">biography, </span>
+history, war, music, documentary, sport, western, musical, <span class="hljs-keyword">science-fiction, </span>
+<span class="hljs-keyword">short, </span>film-noir, tv-movie, <span class="hljs-keyword">shounen, </span><span class="hljs-keyword">school, </span>news, magic, supernatural, mecha, 
+military, historical, foreign, slice-of-life, horor, suspense, psychological, sports, 
+live-action, samurai, erotic, adult, recommend, police, youth, kids, costume, super-power, 
+actin-comedy, detective, investigation, doraemon, movies, oscar-nominated-<span class="hljs-keyword">short-film, </span>mandarin, 
+mature, mistery, omnibus, adventures, time-travel, special, ova, parody, seinen, actiom, <span class="hljs-keyword">shoujo</span>
+</code></pre>Base URL : <code>https://dunia21.herokuapp.com/{genre}</code><br><h5 id="rawurl-">Rawurl :</h5>
+<pre><code>http:<span class="hljs-regexp">//</span>localhost<span class="hljs-regexp">/dunia21/g</span>enre<span class="hljs-regexp">/animation</span>
+</code></pre>Contoh output<pre><code class="lang-json">[
+  {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://dunia21.me/mfkz-mutafukaz-2017/"</span>,
+      <span class="hljs-attr">"judul"</span>: <span class="hljs-string">"MFKZ (Mutafukaz) (2017)"</span>,
+      <span class="hljs-attr">"genre"</span>: [
+          <span class="hljs-string">"action"</span>,
+          <span class="hljs-string">"animation"</span>,
+          <span class="hljs-string">"comedy"</span>,
+          <span class="hljs-string">"sci-fi"</span>,
+          <span class="hljs-string">"thriller"</span>
+      ],
+      <span class="hljs-attr">"durasi"</span>: <span class="hljs-string">"01 jam 30 menit"</span>,
+      <span class="hljs-attr">"negara"</span>: [
+          <span class="hljs-string">"france"</span>,
+          <span class="hljs-string">"japan"</span>
+      ],
+      <span class="hljs-attr">"tahun"</span>: <span class="hljs-string">"2018"</span>,
+      <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://s7.layarkaca21.vip/wp-content/uploads/2019/04/film-mfkz-mutafukaz-2017-lk21.jpg"</span>,
+      <span class="hljs-attr">"rating"</span>: <span class="hljs-string">"6.7"</span>,
+      <span class="hljs-attr">"kualitas"</span>: <span class="hljs-string">"webdl"</span>,
+      <span class="hljs-attr">"isHD"</span>: <span class="hljs-literal">true</span>
+  },
+  {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://dunia21.me/ralph-breaks-the-internet-2018/"</span>,
+      <span class="hljs-attr">"judul"</span>: <span class="hljs-string">"Ralph Breaks the Internet (2018)"</span>,
+      <span class="hljs-attr">"genre"</span>: [
+          <span class="hljs-string">"adventure"</span>,
+          <span class="hljs-string">"animation"</span>,
+          <span class="hljs-string">"comedy"</span>,
+          <span class="hljs-string">"family"</span>,
+          <span class="hljs-string">"fantasy"</span>
+      ],
+      <span class="hljs-attr">"durasi"</span>: <span class="hljs-string">"01 jam 52 menit"</span>,
+      <span class="hljs-attr">"negara"</span>: [
+          <span class="hljs-string">"usa"</span>
+      ],
+      <span class="hljs-attr">"tahun"</span>: <span class="hljs-string">"2018"</span>,
+      <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://s5.layarkaca21.vip/wp-content/uploads/2018/12/film-ralph-breaks-the-internet-2018-lk21.jpg"</span>,
+      <span class="hljs-attr">"rating"</span>: <span class="hljs-string">"7.4"</span>,
+      <span class="hljs-attr">"kualitas"</span>: <span class="hljs-string">"bluray"</span>,
+      <span class="hljs-attr">"isHD"</span>: <span class="hljs-literal">true</span>
+  },
+  {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://dunia21.me/crystal-sky-of-yesterday-zuo-ri-qing-kong-2018/"</span>,
+      <span class="hljs-attr">"judul"</span>: <span class="hljs-string">"Crystal Sky of Yesterday (Zuo ri qing kong) (2018)"</span>,
+      <span class="hljs-attr">"genre"</span>: [
+          <span class="hljs-string">"animation"</span>,
+          <span class="hljs-string">"romance"</span>
+      ],
+      <span class="hljs-attr">"durasi"</span>: <span class="hljs-string">"01 jam 22 menit"</span>,
+      <span class="hljs-attr">"negara"</span>: [
+          <span class="hljs-string">"china"</span>
+      ],
+      <span class="hljs-attr">"tahun"</span>: <span class="hljs-string">"2018"</span>,
+      <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://s5.layarkaca21.vip/wp-content/uploads/2019/03/film-crystal-sky-of-yesterday-zuo-ri-qing-kong-2018-lk21.jpg"</span>,
+      <span class="hljs-attr">"rating"</span>: <span class="hljs-string">"6.0"</span>,
+      <span class="hljs-attr">"kualitas"</span>: <span class="hljs-string">"webdl"</span>,
+      <span class="hljs-attr">"isHD"</span>: <span class="hljs-literal">true</span>
+  },
+  {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://dunia21.me/eiga-hugtto-precure-x-futari-wa-precure-all-stars-memories2018/"</span>,
+      <span class="hljs-attr">"judul"</span>: <span class="hljs-string">"Eiga Hugtto! Precure x Futari wa Precure: All Stars Memories(2018)"</span>,
+      <span class="hljs-attr">"genre"</span>: [
+          <span class="hljs-string">"adventure"</span>,
+          <span class="hljs-string">"animation"</span>,
+          <span class="hljs-string">"family"</span>,
+          <span class="hljs-string">"fantasy"</span>
+      ],
+      <span class="hljs-attr">"durasi"</span>: <span class="hljs-string">"01 jam 40 menit"</span>,
+      <span class="hljs-attr">"negara"</span>: [
+          <span class="hljs-string">"japan"</span>
+      ],
+      <span class="hljs-attr">"tahun"</span>: <span class="hljs-string">"2018"</span>,
+      <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"https://s5.layarkaca21.vip/wp-content/uploads/2019/03/film-eiga-hugtto-precure-x-futari-wa-precure-all-stars-memories2018-lk21.jpg"</span>,
+      <span class="hljs-attr">"rating"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"kualitas"</span>: <span class="hljs-string">"webdl"</span>,
+      <span class="hljs-attr">"isHD"</span>: <span class="hljs-literal">true</span>
+  },
+  {
+      <span class="hljs-attr">"dan seterusnya ..."</span>
+  }
+]
+</code></pre>
+Fitur lainnya silahkan cek di file <code>.htaccess</code><br><h2 id="jika-ada-error-atau-code-kurang-efisien-mohon-maaf-saya-baru-belajar-php-">Jika ada error atau code kurang efisien mohon maaf, saya baru belajar PHP :)</h2>
+</li>
+</ul>
