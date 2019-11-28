@@ -13,7 +13,7 @@ date_default_timezone_set("Asia/Jakarta");
 
 class Scrape{
 
-	public $base_url = "https://dunia21.me";
+	public $base_url = "https://dunia21.wtf";
 		
 	function Format_Menit($time, $format = '%02d:%02d') {
 		if ($time < 1) {
@@ -124,7 +124,7 @@ class Scrape{
 	function Download_Film($url){
 		$url = $this->base_url."/{$url}/";
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, 'http://asdahsdkjajslkfbkaujsgfbjaeghfyjj76e8637e68723rhbfajkl.akurat.co/verifying.php');
+		curl_setopt($ch, CURLOPT_URL, 'https://asdahsdkjajslkfbkaujsgfbjaeghfyjj76e8637e68723rhbfajkl.akurat.co/verifying.php');
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, "slug=".$this->Slug($url));
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
