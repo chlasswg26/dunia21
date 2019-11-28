@@ -1,20 +1,6 @@
-<h1 id="-scraper-dunia21-lk21-https-github-com-ardzz-dunia21-"><a href="https://github.com/ardzz/dunia21">Scraper Dunia21 / LK21</a></h1>
-<p><a href=""><img src="https://img.shields.io/badge/Version-1.0-brightgreen.svg?maxAge=259200" alt="Version"></a>
-<a href=""><img src="https://img.shields.io/badge/Release-Beta-green.svg" alt="Stage"></a>
-<a href=""><img src="https://img.shields.io/badge/Codename_-_Ardzz-blue.svg?maxAge=259200" alt="Build"></a>
-<a href="http://hits.dwyl.io/ardzz/dunia21"><img src="http://hits.dwyl.io/ardzz/dunia21.svg" alt="HitCount"></a></p>
-<h3 id="scraper-dunia21-lk21">Scraper Dunia21 / LK21</h3>
-<p><em>Scraper</em> ini adalah <em>scraper</em> buatan saya yang pertama dan juga berbasis <strong>API</strong> dengan output <strong>JSON</strong><br>
-Saya menulis kode ini secara <em>native</em> dan tidak menggunakan framework</p>
-<h2 id="persyaratan-">Persyaratan :</h2>
-<ul>
-<li>PHP 7.x</li>
-<li>Library cURL (php-curl)</li>
-<li>OS Linux only, <em>karena saya belum mencobanya di OS <strong>Windows</strong></em></li>
-</ul>
 <h2 id="penggunaan-">Penggunaan :</h2>
 <ul>
-<li>Clone repository ini didalam folder path webserver (misalnya di <em>/var/www/html/</em>)<h4 id="mencari-film">Mencari Film</h4>
+<li><h4 id="mencari-film">Mencari Film</h4>
 Base URL : <code>https://dunia21.herokuapp.com/cari_film/{query}</code> <br>
 Query silahkan diganti dengan judul film yang dicari, contoh<br><pre><code><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost/dunia21/cari_film/how+to+train+your+dragon</span>
 </code></pre>URL diatas sudan diencode menjadi rawurl<br>
@@ -267,6 +253,12 @@ mature, mistery, omnibus, adventures, time-travel, special, ova, parody, seinen,
   }
 ]
 </code></pre>
-Fitur lainnya silahkan cek di file <code>.htaccess</code><br><h2 id="jika-ada-error-atau-code-kurang-efisien-mohon-maaf-saya-baru-belajar-php-">Jika ada error atau code kurang efisien mohon maaf, saya baru belajar PHP :)</h2>
+Fitur lainnya silahkan cek </h2>
+<pre>
+Berdasarkan Tahun https://dunia21.herokuapp.com/tahun/{tahun} (example /tahun/2019)
+
+Berdasarkan Kepopuleran https://dunia21.herokuapp.com/film_populer
+
+Berdasarkan BluRay https://dunia21.herokuapp.com/film_bluray
 </li>
 </ul>
